@@ -1,0 +1,31 @@
+managed implementation in class zbp_i_0431_poc unique;
+strict;
+define behavior for ZI_0431_POC alias Incidents//alias <alias_name>
+persistent table zta_incident0431
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  field ( numbering : managed, readonly ) Incuuid;
+  field ( readonly ) Appuid, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt, LocalLastChangedAt;
+  create;
+  update;
+  delete;
+
+  mapping for zta_incident0431
+  {
+    Incuuid = incuuid;
+    Incid = incid;
+    Requid = requid;
+    Logsys = logsys;
+    Logcli = logcli;
+    Version = version;
+    Appuid = appuid;
+    IncStatus = overall_status;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

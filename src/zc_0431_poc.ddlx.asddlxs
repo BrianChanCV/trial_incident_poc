@@ -1,0 +1,69 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Incident',
+                typeNamePlural: 'Incidents',
+                title: { type: #STANDARD, label: 'Incident', value: 'Incid' } },
+  presentationVariant: [{ sortOrder: [{ by: 'Incid', direction:  #ASC }] }] }
+annotate view ZC_0431_POC with
+{
+  @UI:{ identification: [{ position: 1, label: 'Travel UUID' }] }
+  Incuuid;
+  @UI: {  lineItem:       [ { position: 10 } ],
+      identification: [ { position: 10 } ],
+      selectionField: [ { position: 10 } ] }
+  Incid;
+
+  @UI: {  lineItem:       [ { position: 20 } ],
+      identification: [ { position: 20 } ],
+      selectionField: [ { position: 20 } ] }
+  Requid;
+
+  @UI.hidden: true
+  Reqname;
+
+  @UI: {  lineItem:       [ { position: 30 } ],
+      identification: [ { position: 30 } ],
+      selectionField: [ { position: 30 } ] }
+  Logsys;
+
+  @UI: {  lineItem:       [ { position: 40 } ],
+  identification: [ { position: 40 } ],
+  selectionField: [ { position: 40 } ] }
+  Logcli;
+
+  @UI: {  lineItem:       [ { position: 50 } ],
+      identification: [ { position: 50 } ] }
+  Version;
+
+  @UI: {  lineItem:       [ { position: 60 } ],
+  identification: [ { position: 60 } ] }
+  IncStatus;
+
+  @UI: {  lineItem:       [ { position: 70 } ],
+  identification: [ { position: 70 } ] }
+  Appuid;
+
+  @UI.hidden: true
+  Appname;
+
+  @UI.hidden: true
+  CreatedBy;
+
+  @UI.hidden: true
+  CreatedAt;
+
+  @UI.hidden: true
+  LastChangedBy;
+
+  @UI.hidden: true
+  LastChangedAt;
+
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+  @UI.hidden: true
+  _Logsys;
+
+  @UI.hidden: true
+  _Users;
+}

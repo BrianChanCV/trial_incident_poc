@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition For 0431 Incident POC'
+define service ZUI_0431_POC {
+  expose ZC_0431_POC;
+}
